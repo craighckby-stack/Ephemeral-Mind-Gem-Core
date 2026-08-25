@@ -1,0 +1,6 @@
+{
+  "name": "Ephemeral Mind Gem Core",
+  "description": "A retro-themed DOS terminal interface to analyze topics through multiple expert perspectives, synthesize a cohesive knowledge graph, and explore the concept space dynamically.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  body, html, .font-mono {
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace !important;
+    background-color: #000000 !important;
+    color: #84cc16 !important;
+  }
+
+  /* Force rounded-none everywhere for classic terminal look */
+  *, *::before, *::after {
+    border-radius: 0px !important;
+  }
+}
+
+/* Custom terminal scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #84cc16;
+  border: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3e635;
+}
+
+/* Custom panel blocks with shadows for blocky retro depth */
+.dos-panel {
+  background-color: #000000;
+  border: 2px solid #84cc16;
+  box-shadow: 4px 4px 0 #84cc16;
+}
+
+.dos-btn {
+  background-color: #000000;
+  color: #84cc16;
+  border: 2px solid #84cc16;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.dos-btn:hover:not(:disabled) {
+  background-color: #84cc16;
+  color: #000000;
+  box-shadow: -2px -2px 0 #84cc16;
+}
+
+.dos-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #4d7c0f;
+  color: #4d7c0f;
+  box-shadow: none;
+}
+
+/* Custom blink animation for cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 15px;
+  background-color: #84cc16;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+/* Glow lines */
+.crt-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  background-size: 100% 4px, 6px 100%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.15;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.25s ease-out forwards;
+}
+
