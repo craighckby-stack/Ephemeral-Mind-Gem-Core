@@ -1,3 +1,7 @@
+Live Preview 
+
+https://ai.studio/apps/afe7d990-842a-4a9b-ab45-6d84ca8e06d0
+
 # EMG [KERNEL v0.3] — Ephemeral Mind Gem Core
 
 An immersive, retro-themed multi-agent simulation and analytical synthesis sandbox. Built using **TypeScript**, **React**, **Three.js**, and a customized full-stack **Vite + Express** architecture utilizing the advanced Google Gemini SDK.
