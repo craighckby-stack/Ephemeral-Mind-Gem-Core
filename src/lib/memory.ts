@@ -1,3 +1,10 @@
+/**
+ * DARLEK CANN ARCHITECTURAL HEADER
+ * File: src/lib/memory.ts
+ * Role: Core system component participating in autonomous cognitive evolution cycles.
+ * Architecture: Type-safe modular unit with resilient state interfaces.
+ */
+
 import { initializeApp, getApp, getApps } from 'firebase/app';
 import { getFirestore, doc, getDoc, setDoc, collection, getDocs, Firestore } from 'firebase/firestore';
 import { MemoryRecord } from '../types';
